@@ -13,7 +13,7 @@ export class Price implements PriceModel {
 
   constructor({ amount, date, percentage }: PriceModel) {
     this.amount = amount
-    this.date = date
+    this.date = new Date(date)
     this.percentage = percentage
   }
 }

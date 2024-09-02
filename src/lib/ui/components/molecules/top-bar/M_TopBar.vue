@@ -16,21 +16,17 @@ import A_Icon from '@/lib/ui/components/atoms/icon/A_Icon.vue'
 header {
   position: fixed;
   width: 100%;
-  height: 64px;
-  padding-inline: 4px;
-  padding-block: 8px;
+  height: var(--s-64px);
+  padding-inline: var(--s-4px);
+  padding-block: var(--s-8px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 24px;
+  font-size: var(--s-24px);
   top: 0;
-  background-color: #FEF7FF;
 
   > .top-bar__icon-wrapper {
-    padding: 10px;
-  }
-  > span.top-bar__title {
-    font-size: 22px;
+    padding: var(--s-12px);
   }
 }
 </style>

@@ -1,7 +1,7 @@
 import { BLoC } from '@/lib/core/utils/BLoC'
 import { MarketState } from '@/lib/features/market/presentation/bloc/Market.state'
 import { MarketEvents } from '@/lib/features/market/presentation/bloc/Market.events'
-import { UnexpectedException } from '@/lib/core/utils/GenericException'
+import { UnexpectedException } from '@/lib/core/utils/exceptions/GenericException'
 import type { UseCase } from '@/lib/core/utils/UseCase'
 import { inject } from '@/lib/core/utils/Container'
 

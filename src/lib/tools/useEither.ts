@@ -1,4 +1,4 @@
-import { Either } from '@/lib/core/utils/Either'
+import { Either } from '@/lib/core/utils/exceptions/Either'
 
 export const useEither = {
   left: <L, R>(value: L): Either<L, R> => new Either<L, R>({ kind: 'left', leftValue: value }),

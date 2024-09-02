@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { onBeforeMount } from 'vue'
-import { useMoney } from '@/lib/hooks/useMoney'
+import { onMounted } from 'vue'
+
 import { Container } from '@/lib/core/utils/Container'
 import type { MarketBloc } from '@/lib/features/market/presentation/bloc/Market.bloc'
 import { useBLoC } from '@/lib/hooks/useBLoC'
 import type { MarketState } from '@/lib/features/market/presentation/bloc/Market.state'
 import { MarketEvents } from '@/lib/features/market/presentation/bloc/Market.events'
 import O_DefaultLayout from '@/lib/ui/components/organisms/O_DefaultLayout.vue'
+import A_CircularProgress from '@/lib/ui/components/atoms/progress/A_CircularProgress.vue'
+import MarketGraph from '@/lib/features/market/presentation/pages/components/MarketGraph.vue'
 
 const bloc = Container.get<MarketBloc>('market_bloc')
 const state = useBLoC<MarketState>(bloc)
 
-onBeforeMount(async () => {
+onMounted(async () => {
   await bloc.dispatch(MarketEvents.GetCurrentMarket)
 })
 </script>
@@ -19,17 +21,8 @@ onBeforeMount(async () => {
 <template>
   <O_DefaultLayout>
     <template #default>
-      <p v-if="state.isLoading">
-        Loading...
-      </p>
-      <p v-else-if="0 < state.errors.length">
-        {{ state.errors }}
-      </p>
-      <ul v-else-if="state.data">
-        <li v-for="(price, index) in state.data.prices" :key="`${price.amount}_${index}`">
-          <span>{{ useMoney(price.amount) }}</span>
-        </li>
-      </ul>
+      <A_CircularProgress v-if="state.isLoading" />
+      <MarketGraph v-else-if="state.data" :market="state.data" />
     </template>
   </O_DefaultLayout>
 </template>

@@ -16,7 +16,7 @@ export class Market implements MarketModel {
   prices: Price[]
 
   constructor({ updatedAt, groupBy, energyMeasure, prices }: MarketModel) {
-    this.updatedAt = updatedAt
+    this.updatedAt = new Date(updatedAt)
     this.groupBy = groupBy
     this.energyMeasure = energyMeasure
     this.prices = prices?.map(price => new Price(price))

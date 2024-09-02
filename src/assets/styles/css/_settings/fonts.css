@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root {
+  --ff-body: Roboto, "Helvetica Neue", sans-serif;
+  --fs-medium: clamp(var(--s-16px), 1.5vw, var(--s-20px));
+  --fs-large: clamp(var(--s-20px), 1.8vw, var(--s-24px));
+}
+
+

@@ -1,5 +1,5 @@
-import type { DataException } from '@/lib/core/utils/DataException'
 import type { State } from '@/lib/core/utils/State'
+import type { DataException } from '@/lib/core/utils/exceptions/DataException'
 
 export type Observer<S> = (state: S) => void
 

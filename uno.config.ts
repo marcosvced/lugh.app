@@ -1,6 +1,6 @@
-import {defineConfig} from "unocss";
-import lugh from './src/assets/unocss/index'
+import { defineConfig } from 'unocss'
+import lugh from '@/assets/styles/unocss/index'
 
 export default defineConfig({
-    presets: [lugh({})]
+  presets: [lugh({})],
 })

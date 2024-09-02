@@ -1,5 +1,5 @@
 import type { ResponseStatus } from '@/lib/core/api/domain/entities/ResponseStatus'
-import type { Either } from '@/lib/core/utils/Either'
+import type { Either } from '@/lib/core/utils/exceptions/Either'
 
 interface Response {
   status: ResponseStatus

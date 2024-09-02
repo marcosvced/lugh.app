@@ -23,7 +23,7 @@ export default defineConfig({
         enabled: true,
       },
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico'],
+      includeAssets: ['favicon.svg'],
       manifest: {
         name: 'My Awesome App',
         short_name: 'MyApp',

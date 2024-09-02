@@ -2,7 +2,7 @@ import type { MarketRepository } from '@/lib/features/market/domain/ports/Market
 import type { MarketModel } from '@/lib/features/market/domain/entities/Market'
 import { Market } from '@/lib/features/market/domain/entities/Market'
 import type { MarketDto } from '@/lib/features/market/data/dto/Market.dto'
-import { UnexpectedException } from '@/lib/core/utils/GenericException'
+import { UnexpectedException } from '@/lib/core/utils/exceptions/GenericException'
 import { inject } from '@/lib/core/utils/Container'
 
 export class MarketRepositoryImpl implements MarketRepository {

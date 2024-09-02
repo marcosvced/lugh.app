@@ -1,4 +1,4 @@
-import type { DataException } from '@/lib/core/utils/DataException'
+import type { DataException } from '@/lib/core/utils/exceptions/DataException'
 import type { State } from '@/lib/core/utils/State'
 import type { Market } from '@/lib/features/market/domain/entities/Market'
 

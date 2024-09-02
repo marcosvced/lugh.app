@@ -1,0 +1,9 @@
+body,
+#__nuxt {
+  height: 100vh;
+  font-family: var(--ff-body);
+  background: var(--c-ash);
+  color: var(--c-light-tint-200);
+  font-size: var(--fs-medium);
+}
+

@@ -1,18 +1,13 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <RouterView />
+  <div>
+    <RouterView />
+  </div>
 </template>
 
 <style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-
-}
 </style>
